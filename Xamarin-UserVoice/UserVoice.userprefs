@@ -1,0 +1,14 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="UserVoice/ApiDefinition.cs">
+    <Files>
+      <File FileName="UserVoice/ApiDefinition.cs" Line="151" Column="63" />
+      <File FileName="UserVoice/StructsAndEnums.cs" Line="1" Column="1" />
+      <File FileName="UserVoice/libUserVoice.linkwith.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

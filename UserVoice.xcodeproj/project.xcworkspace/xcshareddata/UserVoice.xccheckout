@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>C89F3CC4-FBAF-4CFD-930A-EC4403660E22</string>
+	<key>IDESourceControlProjectName</key>
+	<string>UserVoice</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>F82F79BD-15CA-4EDE-BDBF-CD84CD35B97A</key>
+		<string>ssh://github.com/uservoice/uservoice-ios-sdk.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>UserVoice.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>F82F79BD-15CA-4EDE-BDBF-CD84CD35B97A</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/uservoice/uservoice-ios-sdk.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>F82F79BD-15CA-4EDE-BDBF-CD84CD35B97A</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>F82F79BD-15CA-4EDE-BDBF-CD84CD35B97A</string>
+			<key>IDESourceControlWCCName</key>
+			<string>uservoice-ios-sdk</string>
+		</dict>
+	</array>
+</dict>
+</plist>
