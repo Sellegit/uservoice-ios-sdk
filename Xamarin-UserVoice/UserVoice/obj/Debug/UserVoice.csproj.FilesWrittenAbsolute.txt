@@ -8,3 +8,8 @@
 /Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-ios-sdk/Xamarin-UserVoice/UserVoice/bin/Debug/UserVoice.dll
 /Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-ios-sdk/Xamarin-UserVoice/UserVoice/obj/Debug/UserVoice.dll
 /Users/dementrock/Sellegit/peach_mobile/Lib/uservoice-ios-sdk/Xamarin-UserVoice/UserVoice/obj/Debug/UserVoice.dll.mdb
+/Users/S_sn/Sellegit/Sellegit_Mobile/Lib/uservoice-ios-sdk/Xamarin-UserVoice/UserVoice/obj/Debug/MonoTouch,Version=v1.0.AssemblyAttribute.cs
+/Users/S_sn/Sellegit/Sellegit_Mobile/Lib/uservoice-ios-sdk/Xamarin-UserVoice/UserVoice/bin/Debug/UserVoice.dll.mdb
+/Users/S_sn/Sellegit/Sellegit_Mobile/Lib/uservoice-ios-sdk/Xamarin-UserVoice/UserVoice/bin/Debug/UserVoice.dll
+/Users/S_sn/Sellegit/Sellegit_Mobile/Lib/uservoice-ios-sdk/Xamarin-UserVoice/UserVoice/obj/Debug/UserVoice.dll
+/Users/S_sn/Sellegit/Sellegit_Mobile/Lib/uservoice-ios-sdk/Xamarin-UserVoice/UserVoice/obj/Debug/UserVoice.dll.mdb
