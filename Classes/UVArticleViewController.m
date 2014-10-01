@@ -27,7 +27,7 @@
     self.view = [[UIView alloc] initWithFrame:[self contentFrame]];
     self.navigationItem.title = @"";
 
-    CGFloat footerHeight = 46;
+    CGFloat footerHeight = 0;
     _webView = [UIWebView new];
     NSString *section = _article.topicName ? [NSString stringWithFormat:@"%@ / %@", NSLocalizedStringFromTableInBundle(@"Knowledge Base", @"UserVoice", [UserVoice bundle], nil), _article.topicName] : NSLocalizedStringFromTableInBundle(@"Knowledge base", @"UserVoice", [UserVoice bundle], nil);
     NSString *linkColor;
@@ -71,6 +71,7 @@
         @"|[border]|", @"|-[label]-(>=10)-[yes]-30-[no]-30-|",
         @"V:|[border(==1)]", @"V:|-15-[label]", (IOS7 ? @"V:|-6-[yes]" : @"V:|-12-[yes]"), (IOS7 ? @"V:|-6-[no]" : @"V:|-12-[no]")
     ];
+    footer.hidden = YES;
     [self configureView:footer
                subviews:NSDictionaryOfVariableBindings(border, label, yes, no)
             constraints:constraints];
@@ -79,7 +80,7 @@
                subviews:NSDictionaryOfVariableBindings(_webView, footer)
             constraints:@[@"V:|[_webView]|", @"V:[footer]|", @"|[_webView]|", @"|[footer]|"]];
     [self.view addConstraint:[NSLayoutConstraint constraintWithItem:footer attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0 constant:footerHeight]];
-    [self.view bringSubviewToFront:footer];
+//    [self.view bringSubviewToFront:footer];
 }
 
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
