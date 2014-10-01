@@ -22,7 +22,7 @@
 		<key>285D543319EEB38B059014F34D43A79D66C1ECDC</key>
 		<string>../..</string>
 		<key>64C49BBE65F6A5950D97C7B93C058A31B4831DD5</key>
-		<string>../../../..</string>
+		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>ssh://github.com/uservoice/uservoice-ios-sdk.git</string>
@@ -38,7 +38,7 @@
 			<key>IDESourceControlWCCIdentifierKey</key>
 			<string>64C49BBE65F6A5950D97C7B93C058A31B4831DD5</string>
 			<key>IDESourceControlWCCName</key>
-			<string>..</string>
+			<string></string>
 		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>

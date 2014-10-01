@@ -63,7 +63,7 @@
     desc.text = NSLocalizedStringFromTableInBundle(@"When you post an idea on our forum, others will be able to subscribe to it and make comments. When we respond to the idea, you'll get notified.", @"UserVoice", [UserVoice bundle], nil);
     desc.textColor = [UIColor colorWithRed:0.6f green:0.6f blue:0.6f alpha:1.0f];
     desc.numberOfLines = 0;
-    desc.font = [UIFont systemFontOfSize:12];
+    desc.font = [UVStyleSheet styleSheetFontOfSize:12];
     self.desc = desc;
 
     NSArray *constraints = @[

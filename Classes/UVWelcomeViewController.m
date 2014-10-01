@@ -58,6 +58,7 @@
         detail = [NSString stringWithFormat:NSLocalizedStringFromTableInBundle(@"%@ ideas", @"UserVoice", [UserVoice bundle], nil), [UVUtils formatInteger:[UVSession currentSession].forum.suggestionsCount]];
     }
     cell.detailTextLabel.text = detail;
+    cell.detailTextLabel.font = [UVStyleSheet styleSheetFontOfSize:14];
 }
 
 - (void)customizeCellForTopic:(UITableViewCell *)cell indexPath:(NSIndexPath *)indexPath {
@@ -69,6 +70,7 @@
         UVHelpTopic *topic = [[UVSession currentSession].topics objectAtIndex:indexPath.row];
         cell.textLabel.text = topic.name;
         cell.detailTextLabel.text = [NSString stringWithFormat:@"%d", (int)topic.articleCount];
+        cell.detailTextLabel.font = [UVStyleSheet styleSheetFontOfSize:14];
     }
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 }

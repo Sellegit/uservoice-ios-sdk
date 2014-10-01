@@ -21,13 +21,13 @@
     UILabel *title = [UILabel new];
     title.text = _titleText;
     title.textColor = [UIColor whiteColor];
-    title.font = [UIFont systemFontOfSize:26];
+    title.font = [UVStyleSheet styleSheetFontOfSize:26];
     title.textAlignment = NSTextAlignmentCenter;
     title.backgroundColor = [UIColor clearColor];
     UILabel *text = [UILabel new];
     text.text = _text;
     text.textColor = [UIColor whiteColor];
-    text.font = [UIFont systemFontOfSize:15];
+    text.font = [UVStyleSheet styleSheetFontOfSize:15];
     text.numberOfLines = 0;
     text.textAlignment = NSTextAlignmentCenter;
     text.backgroundColor = [UIColor clearColor];
@@ -36,13 +36,13 @@
     button.layer.borderColor = [UIColor whiteColor].CGColor;
     button.layer.backgroundColor = [UIColor colorWithRed:0.f green:0.f blue:0.f alpha:0.3f].CGColor;
     button.layer.cornerRadius = 14.0;
-    button.titleLabel.font = [UIFont systemFontOfSize:14];
+    button.titleLabel.font = [UVStyleSheet styleSheetFontOfSize:14];
     [button setTitle:NSLocalizedStringFromTableInBundle(@"Close", @"UserVoice", [UserVoice bundle], nil) forState:UIControlStateNormal];
     [button addTarget:self action:@selector(dismiss) forControlEvents:UIControlEventTouchUpInside];
     UILabel *power = [UILabel new];
     power.text = NSLocalizedStringFromTableInBundle(@"Powered by UserVoice", @"UserVoice", [UserVoice bundle], nil);
     power.textColor = [UIColor grayColor];
-    power.font = [UIFont systemFontOfSize:13];
+    power.font = [UVStyleSheet styleSheetFontOfSize:13];
     power.textAlignment = NSTextAlignmentCenter;
     power.backgroundColor = [UIColor clearColor];
     if ([UVSession currentSession].clientConfig.whiteLabel) {

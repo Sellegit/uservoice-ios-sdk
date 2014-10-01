@@ -53,7 +53,7 @@
     border.backgroundColor = [UIColor colorWithRed:0.85f green:0.85f blue:0.85f alpha:1.0f];
     UILabel *label = [UILabel new];
     label.text = NSLocalizedStringFromTableInBundle(@"Was this article helpful?", @"UserVoice", [UserVoice bundle], nil);
-    label.font = [UIFont systemFontOfSize:13];
+    label.font = [UVStyleSheet styleSheetFontOfSize:13];
     label.textColor = [UIColor colorWithRed:0.41f green:0.42f blue:0.43f alpha:1.0f];
     label.backgroundColor = [UIColor clearColor];
     _footerLabel = label;

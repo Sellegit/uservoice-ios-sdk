@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "UVStyleSheet.h"
 
 @interface UVUtils : NSObject
 
@@ -26,7 +27,7 @@
 + (BOOL)isUVRecordInvalid:(NSError *)error forField:(NSString *)field withMessage:(NSString *)message;
 + (BOOL)isAuthError:(NSError *)error;
 + (BOOL)isNotFoundError:(NSError *)error;
-
++ (void)applyStylesheet:(UVStyleSheet*)styles ToNavigationController:(UINavigationController *)navigationController;
 + (void)applyStylesheetToNavigationController:(UINavigationController *)navigationController;
 + (NSString *)formatInteger:(NSInteger)number;
 + (NSString *)colorToCSS:(UIColor *)color;

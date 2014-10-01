@@ -92,15 +92,15 @@
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     UIImageView *heart = [UVUtils imageViewWithImageNamed:@"uv_heart.png"];
     UILabel *subs = [UILabel new];
-    subs.font = [UIFont systemFontOfSize:14];
+    subs.font = [UVStyleSheet styleSheetFontOfSize:14];
     subs.textColor = [UIColor grayColor];
     subs.tag = SUBSCRIBER_COUNT;
     UILabel *title = [UILabel new];
     title.numberOfLines = 0;
     title.tag = TITLE;
-    title.font = [UIFont systemFontOfSize:17];
+    title.font = [UVStyleSheet styleSheetFontOfSize:17];
     UILabel *status = [UILabel new];
-    status.font = [UIFont systemFontOfSize:11];
+    status.font = [UVStyleSheet styleSheetFontOfSize:11];
     status.tag = STATUS;
     UIView *statusColor = [UIView new];
     statusColor.tag = STATUS_COLOR;
@@ -139,7 +139,7 @@
     UILabel *label = [[UILabel alloc] initWithFrame:cell.frame];
     label.autoresizingMask = UIViewAutoresizingFlexibleWidth;
     label.backgroundColor = [UIColor clearColor];
-    label.font = [UIFont systemFontOfSize:16];
+    label.font = [UVStyleSheet styleSheetFontOfSize:16];
     label.textAlignment = NSTextAlignmentCenter;
     label.tag = LOADING;
     [cell addSubview:label];

@@ -167,13 +167,13 @@
 
     UILabel *date = [UILabel new];
     date.tag = COMMENT_DATE_TAG;
-    date.font = [UIFont systemFontOfSize:12];
+    date.font = [UVStyleSheet styleSheetFontOfSize:12];
     date.textColor = [UIColor colorWithRed:0.58f green:0.58f blue:0.60f alpha:1.0f];
 
     UILabel *text = [UILabel new];
     text.tag = COMMENT_TEXT_TAG;
     text.numberOfLines = 0;
-    text.font = [UIFont systemFontOfSize:13];
+    text.font = [UVStyleSheet styleSheetFontOfSize:13];
     text.textColor = [UIColor colorWithRed:0.41f green:0.42f blue:0.43f alpha:1.0f];
 
     NSArray *constraints = @[
@@ -212,7 +212,7 @@
     UILabel *label = [[UILabel alloc] initWithFrame:cell.frame];
     label.autoresizingMask = UIViewAutoresizingFlexibleWidth;
     label.backgroundColor = [UIColor clearColor];
-    label.font = [UIFont systemFontOfSize:16];
+    label.font = [UVStyleSheet styleSheetFontOfSize:16];
     label.textAlignment = NSTextAlignmentCenter;
     label.tag = LOADING;
     [cell addSubview:label];
@@ -225,7 +225,7 @@
 
 - (void)initCellForSuggestion:(UITableViewCell *)cell indexPath:(NSIndexPath *)indexPath {
     UILabel *category = [UILabel new];
-    category.font = [UIFont systemFontOfSize:13];
+    category.font = [UVStyleSheet styleSheetFontOfSize:13];
     category.text = _suggestion.category.name ? [NSString stringWithFormat:@"%@ / %@", NSLocalizedStringFromTableInBundle(@"Feedback", @"UserVoice", [UserVoice bundle], nil), _suggestion.category.name] : NSLocalizedStringFromTableInBundle(@"Feedback", @"UserVoice", [UserVoice bundle], nil);
     category.adjustsFontSizeToFitWidth = YES;
     category.minimumScaleFactor = 0.5;
@@ -237,7 +237,7 @@
     title.numberOfLines = 0;
 
     UVTruncatingLabel *desc = [UVTruncatingLabel new];
-    desc.font = [UIFont systemFontOfSize:14];
+    desc.font = [UVStyleSheet styleSheetFontOfSize:14];
     desc.fullText = _suggestion.text;
     desc.numberOfLines = 0;
     desc.delegate = self;
@@ -267,12 +267,12 @@
     statusColor.backgroundColor = _suggestion.statusColor;
 
     UILabel *status = [UILabel new]; 
-    status.font = [UIFont systemFontOfSize:12];
+    status.font = [UVStyleSheet styleSheetFontOfSize:12];
     status.text = _suggestion.status.uppercaseString;
     status.textColor = _suggestion.statusColor;
 
     UILabel *date = [UILabel new];
-    date.font = [UIFont systemFontOfSize:12];
+    date.font = [UVStyleSheet styleSheetFontOfSize:12];
     date.textColor = [UIColor colorWithRed:0.58f green:0.58f blue:0.60f alpha:1.0f];
     date.text = [NSDateFormatter localizedStringFromDate:_suggestion.responseCreatedAt dateStyle:NSDateFormatterMediumStyle timeStyle:NSDateFormatterNoStyle];
     
@@ -281,7 +281,7 @@
         avatar.URL = _suggestion.responseUserAvatarUrl;
 
         UVTruncatingLabel *text = [UVTruncatingLabel new];
-        text.font = [UIFont systemFontOfSize:13];
+        text.font = [UVStyleSheet styleSheetFontOfSize:13];
         text.textColor = [UIColor colorWithRed:0.41f green:0.42f blue:0.43f alpha:1.0f];
         text.fullText = _suggestion.responseText;
         text.numberOfLines = 0;
@@ -289,7 +289,7 @@
         text.tag = ADMIN_RESPONSE;
 
         UILabel *admin = [UILabel new];
-        admin.font = [UIFont systemFontOfSize:11];
+        admin.font = [UVStyleSheet styleSheetFontOfSize:11];
         admin.text = _suggestion.responseUserWithTitle;
         admin.textColor = [UIColor colorWithRed:0.69f green:0.69f blue:0.72f alpha:1.0f];
         admin.adjustsFontSizeToFitWidth = YES;
@@ -451,7 +451,7 @@
     border.backgroundColor = [UIColor colorWithRed:0.85f green:0.85f blue:0.85f alpha:1.0f];
     if (_instantAnswers) {
         UILabel *people = [UILabel new];
-        people.font = [UIFont systemFontOfSize:14];
+        people.font = [UVStyleSheet styleSheetFontOfSize:14];
         people.textColor = [UIColor colorWithRed:0.58f green:0.58f blue:0.60f alpha:1.0f];
         people.backgroundColor = [UIColor clearColor];
         _subscriberCount = people;
@@ -480,11 +480,11 @@
     } else {
         UILabel *want = [UILabel new];
         want.text = NSLocalizedStringFromTableInBundle(@"I want this!", @"UserVoice", [UserVoice bundle], nil);
-        want.font = [UIFont systemFontOfSize:16];
+        want.font = [UVStyleSheet styleSheetFontOfSize:16];
         want.backgroundColor = [UIColor clearColor];
 
         UILabel *people = [UILabel new];
-        people.font = [UIFont systemFontOfSize:13];
+        people.font = [UVStyleSheet styleSheetFontOfSize:13];
         people.textColor = [UIColor colorWithRed:0.58f green:0.58f blue:0.60f alpha:1.0f];
         people.backgroundColor = [UIColor clearColor];
         _subscriberCount = people;

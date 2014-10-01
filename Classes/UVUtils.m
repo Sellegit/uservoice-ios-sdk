@@ -227,8 +227,7 @@ static const char encodingTable[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopq
     return [error code] == 404;
 }
 
-+ (void)applyStylesheetToNavigationController:(UINavigationController *)navigationController {
-    UVStyleSheet *styles = [UVStyleSheet instance];
++ (void)applyStylesheet:(UVStyleSheet*)styles ToNavigationController:(UINavigationController *)navigationController{
     if (IOS7) {
         navigationController.navigationBar.tintColor = styles.navigationBarTintColor;
         navigationController.navigationBar.backgroundColor = styles.navigationBarBackgroundColor;
@@ -247,6 +246,11 @@ static const char encodingTable[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopq
         [navbarTitleTextAttributes setObject:styles.navigationBarFont forKey:NSFontAttributeName];
     }
     [navigationController.navigationBar setTitleTextAttributes:navbarTitleTextAttributes];
+}
+
++ (void)applyStylesheetToNavigationController:(UINavigationController *)navigationController {
+    UVStyleSheet *styles = [UVStyleSheet instance];
+    [UVUtils applyStylesheet:styles ToNavigationController:navigationController];
 }
 
 + (NSString *)formatInteger:(NSInteger)number {

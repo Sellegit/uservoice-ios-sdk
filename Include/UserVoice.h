@@ -12,7 +12,7 @@
 #import "UVConfig.h"
 #import "UVStyleSheet.h"
 
-@interface UserVoice : NSObject 
+@interface UserVoice : NSObject
 
 // Initialize UserVoice with a config
 // This should be called on app launch so that UserVoice can provide accurate
@@ -54,6 +54,8 @@
 
 // Tell UserVoice to track an event with properties
 + (void)track:(NSString *)event properties:(NSDictionary *)properties;
+
++ (void)setStyleSheet:(UVStyleSheet*)aStyle;
 
 /**
  * @deprecated Use [UserVoice presentUserVoiceModalInterfaceForParentViewController:andConfig:] instead.

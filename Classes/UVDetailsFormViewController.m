@@ -33,7 +33,7 @@
         label.text = _helpText;
         label.textColor = [UIColor colorWithRed:0.6f green:0.6f blue:0.6f alpha:1.0f];
         label.numberOfLines = 0;
-        label.font = [UIFont systemFontOfSize:12];
+        label.font = [UVStyleSheet styleSheetFontOfSize:12];
         label.backgroundColor = [UIColor clearColor];
         [self configureView:help subviews:@{@"label":label} constraints:@[@"|-[label]-|", @"V:|[label]"]];
         _tableView.tableFooterView = help;
@@ -69,7 +69,10 @@
             identifier = @"FreeformField";
         }
     }
-    return [self createCellForIdentifier:identifier tableView:theTableView indexPath:indexPath style:UITableViewCellStyleDefault selectable:selectable];
+    
+    UITableViewCell *cell = [self createCellForIdentifier:identifier tableView:theTableView indexPath:indexPath style:UITableViewCellStyleDefault selectable:selectable];
+    
+    return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -106,14 +109,14 @@
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     UILabel *label = [UILabel new];
     label.tag = LABEL;
-    label.font = [UIFont systemFontOfSize:13];
+    label.font = [UVStyleSheet styleSheetFontOfSize:13];
     if (IOS7) {
         label.textColor = label.tintColor;
     }
     UILabel *value = [UILabel new];
     value.tag = VALUE;
     value.numberOfLines = 0;
-    value.font = [UIFont systemFontOfSize:16];
+    value.font = [UVStyleSheet styleSheetFontOfSize:16];
     [self configureView:cell.contentView
                subviews:NSDictionaryOfVariableBindings(label, value)
             constraints:@[@"|-16-[label]-|", @"|-16-[value]-|", @"V:|-10-[label]-6-[value]"]
@@ -138,7 +141,7 @@
 - (void)initCellForFreeformField:(UITableViewCell *)cell indexPath:(NSIndexPath *)indexPath {
     UILabel *label = [UILabel new];
     label.tag = LABEL;
-    label.font = [UIFont systemFontOfSize:13];
+    label.font = [UVStyleSheet styleSheetFontOfSize:13];
     if (IOS7) {
         label.textColor = label.tintColor;
     }

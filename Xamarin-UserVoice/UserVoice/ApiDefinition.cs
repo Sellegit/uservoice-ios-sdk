@@ -160,8 +160,11 @@ namespace UserVoiceBinding {
 		[Static, Export ("version")]
 		string Version { get; }
 
-		[Static, Export ("setExternalId:forScope:")]
-		void SetExternalId (string identifier, string scope);
+		[Static, Export ("setStyleSheet:")]
+    void SetStyleSheet (UVStyleSheet style);
+
+    [Static, Export ("setExternalId:forScope:")]
+    void SetExternalId (string identifier, string scope);
 
 		[Static, Export ("track:")]
 		void Track (string e);

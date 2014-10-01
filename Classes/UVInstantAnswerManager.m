@@ -133,15 +133,15 @@
     UIImageView *icon = [UVUtils imageViewWithImageNamed:@"uv_idea.png"];
     UIImageView *heart = [UVUtils imageViewWithImageNamed:@"uv_heart.png"];
     UILabel *subs = [UILabel new];
-    subs.font = [UIFont systemFontOfSize:14];
+    subs.font = [UVStyleSheet styleSheetFontOfSize:14];
     subs.textColor = [UIColor grayColor];
     subs.tag = SUBSCRIBER_COUNT;
     UILabel *title = [UILabel new];
     title.numberOfLines = 0;
     title.tag = TITLE;
-    title.font = [UIFont systemFontOfSize:17];
+    title.font = [UVStyleSheet styleSheetFontOfSize:17];
     UILabel *status = [UILabel new];
-    status.font = [UIFont systemFontOfSize:11];
+    status.font = [UVStyleSheet styleSheetFontOfSize:11];
     status.tag = STATUS;
     UIView *statusColor = [UIView new];
     statusColor.tag = STATUS_COLOR;
@@ -184,11 +184,11 @@
     }
     UIImageView *icon = [UVUtils imageViewWithImageNamed:@"uv_article.png"];
     UILabel *title = [UILabel new];
-    title.font = [UIFont systemFontOfSize:18];
+    title.font = [UVStyleSheet styleSheetFontOfSize:18];
     title.numberOfLines = 0;
     title.tag = TITLE;
     UILabel *section = [UILabel new];
-    section.font = [UIFont systemFontOfSize:12];
+    section.font = [UVStyleSheet styleSheetFontOfSize:12];
     section.textColor = [UIColor grayColor];
     section.tag = SECTION;
     NSArray *constraints = @[
