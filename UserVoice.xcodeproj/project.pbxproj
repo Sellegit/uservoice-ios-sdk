@@ -85,6 +85,12 @@
 		ACEE442F10AB370F003D8751 /* UVComment.m in Sources */ = {isa = PBXBuildFile; fileRef = ACEE442D10AB370F003D8751 /* UVComment.m */; };
 		ACEE461710ACC158003D8751 /* UVBaseViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = ACEE461510ACC158003D8751 /* UVBaseViewController.h */; };
 		ACEE461810ACC158003D8751 /* UVBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACEE461610ACC158003D8751 /* UVBaseViewController.m */; };
+		B6E064E619DDDBDA00AFBF04 /* uv_article@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D92767FF1559B0E900E17EF1 /* uv_article@2x.png */; };
+		B6E064E719DDDBDA00AFBF04 /* uv_heart@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D94427991804A035002F716B /* uv_heart@2x.png */; };
+		B6E064E819DDDBDA00AFBF04 /* uv_idea@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D92768011559B0E900E17EF1 /* uv_idea@2x.png */; };
+		B6E064E919DDDBDA00AFBF04 /* uv_article.png in Resources */ = {isa = PBXBuildFile; fileRef = D92767FE1559B0E800E17EF1 /* uv_article.png */; };
+		B6E064EA19DDDBDA00AFBF04 /* uv_heart.png in Resources */ = {isa = PBXBuildFile; fileRef = D94427981804A035002F716B /* uv_heart.png */; };
+		B6E064EB19DDDBDA00AFBF04 /* uv_idea.png in Resources */ = {isa = PBXBuildFile; fileRef = D92768001559B0E900E17EF1 /* uv_idea.png */; };
 		C184F7EA17B5AD7C00DBB38C /* UVCallback.h in Headers */ = {isa = PBXBuildFile; fileRef = C184F7E817B5AD7C00DBB38C /* UVCallback.h */; };
 		C184F7EB17B5AD7C00DBB38C /* UVCallback.m in Sources */ = {isa = PBXBuildFile; fileRef = C184F7E917B5AD7C00DBB38C /* UVCallback.m */; };
 		D24540C011B095AA00C7E4BA /* UVSubdomain.h in Headers */ = {isa = PBXBuildFile; fileRef = D24540BE11B095AA00C7E4BA /* UVSubdomain.h */; };
@@ -881,6 +887,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6E064E619DDDBDA00AFBF04 /* uv_article@2x.png in Resources */,
+				B6E064E719DDDBDA00AFBF04 /* uv_heart@2x.png in Resources */,
+				B6E064E819DDDBDA00AFBF04 /* uv_idea@2x.png in Resources */,
+				B6E064E919DDDBDA00AFBF04 /* uv_article.png in Resources */,
+				B6E064EA19DDDBDA00AFBF04 /* uv_heart.png in Resources */,
+				B6E064EB19DDDBDA00AFBF04 /* uv_idea.png in Resources */,
 				306FAD5019D12C000033F479 /* Main.storyboard in Resources */,
 				306FAD5519D12C000033F479 /* LaunchScreen.xib in Resources */,
 				306FAD5219D12C000033F479 /* Images.xcassets in Resources */,

@@ -38,6 +38,12 @@
 
     self.navigationItem.title = NSLocalizedStringFromTableInBundle(@"Post an idea", @"UserVoice", [UserVoice bundle], nil);
     self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedStringFromTableInBundle(@"Back", @"UserVoice", [UserVoice bundle], nil) style:UIBarButtonItemStylePlain target:nil action:nil];
+    
+    UILabel *titleLabel = [UILabel new];
+    titleLabel.text = NSLocalizedStringFromTableInBundle(@"Post an idea", @"UserVoice", [UserVoice bundle], nil);
+    titleLabel.font = [UVStyleSheet customInstance].navigationBarFont;
+    [titleLabel sizeToFit];
+    self.navigationItem.titleView = titleLabel;
 
     _fieldsView = [UVTextWithFieldsView new];
     _titleField = [_fieldsView addFieldWithLabel:NSLocalizedStringFromTableInBundle(@"Title", @"UserVoice", [UserVoice bundle], nil)];
@@ -74,7 +80,7 @@
         @"V:[_fieldsView][sep(==1)]-[desc]",
         @"V:[sep][bg]|"
     ];
-
+    
     [self configureView:view
                subviews:NSDictionaryOfVariableBindings(_fieldsView, sep, desc, bg)
             constraints:constraints];

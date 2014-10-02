@@ -108,13 +108,14 @@
     layer.frame = CGRectMake(0, 0, 9, 9);
     [statusColor.layer addSublayer:layer];
     NSArray *constraints = @[
-        @"|-[title]-|",
-        @"|-[heart(==9)]-3-[subs]-10-[statusColor(==9)]-5-[status]",
+        @"|-15-[title]-|",
+        @"|-15-[heart(==9)]-5-[subs]-10-[statusColor(==9)]-5-[status]",
         @"V:|-12-[title]-6-[heart(==9)]",
         @"V:[title]-6-[statusColor(==9)]",
         @"V:[title]-4-[status]",
         @"V:[title]-2-[subs]"
     ];
+    cell.contentView.translatesAutoresizingMaskIntoConstraints = NO;
     [self configureView:cell.contentView
                subviews:NSDictionaryOfVariableBindings(subs, title, heart, statusColor, status)
             constraints:constraints

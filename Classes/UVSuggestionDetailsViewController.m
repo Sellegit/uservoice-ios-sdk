@@ -249,6 +249,8 @@
         @"|-16-[desc]-|",
         @"V:|-12-[category]-8-[title]-[desc]"
     ];
+    cell.contentView.translatesAutoresizingMaskIntoConstraints = NO;
+    
     [self configureView:cell.contentView
                subviews:NSDictionaryOfVariableBindings(category, title, desc)
             constraints:constraints
@@ -471,7 +473,7 @@
 
         NSArray *constraints = @[
             @"|[border]|", @"V:|[border(==1)]",
-            @"|-[people]-4-[heart(==12)]-4-[this]", @"[want]-|",
+            @"|-15-[people]-4-[heart(==12)]-4-[this]", @"[want]-15-|",
             @"V:|-14-[people]", @"V:|-18-[heart(==11)]", @"V:|-14-[this]", @"V:|-6-[want]"
         ];
         [self configureView:footer
@@ -505,7 +507,7 @@
 
         NSArray *constraints = @[
             @"|[border]|", @"V:|[border(==1)]",
-            @"|-[want]", @"|-[people]-4-[heart(==12)]-4-[this]", @"[_toggle]-|",
+            @"|-15-[want]", @"|-15-[people]-4-[heart(==12)]-4-[this]", @"[_toggle]-15-|",
             @"V:|-14-[want]-2-[people]", @"V:[want]-6-[heart(==11)]", @"V:[want]-2-[this]", @"V:|-16-[_toggle]"
         ];
         [self configureView:footer
