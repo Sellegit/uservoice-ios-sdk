@@ -121,6 +121,7 @@
                                                                              target:self
                                                                              action:@selector(next)];
     self.navigationItem.rightBarButtonItem.enabled = ([_titleField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]].length > 0);
+    self.navigationItem.rightBarButtonItem.tintColor = [UVStyleSheet customInstance].themeColorGray;
     [self registerForKeyboardNotifications];
     _didAuthenticateCallback = [[UVCallback alloc] initWithTarget:self selector:@selector(createSuggestion)];
     [self updateLayout];

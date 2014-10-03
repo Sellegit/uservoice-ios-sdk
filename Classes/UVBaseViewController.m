@@ -166,6 +166,7 @@
     if ([UVSession currentSession].isModal && _firstController) {
         self.navigationItem.leftBarButtonItem = _exitButton;
     }
+
 }
 
 - (UIView *)poweredByView {
@@ -560,6 +561,7 @@
 }
 
 - (void) viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
     [self.tableView setContentOffset:self.tableView.contentOffset animated:NO];
 }
 

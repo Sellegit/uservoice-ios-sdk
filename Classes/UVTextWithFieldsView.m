@@ -87,6 +87,7 @@
     UITextField *field = [UITextField new];
     [field setContentHuggingPriority:UILayoutPriorityDefaultLow forAxis:UILayoutConstraintAxisHorizontal];
     UILabel *label = [UILabel new];
+    label.font = [UVStyleSheet styleSheetFontOfSize:14];
     label.text = [NSString stringWithFormat:@"%@:", labelText];
     label.backgroundColor = [UIColor clearColor];
     label.textColor = [UIColor grayColor];

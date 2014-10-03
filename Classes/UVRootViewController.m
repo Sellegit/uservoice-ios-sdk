@@ -70,7 +70,7 @@
                                                                              style:UIBarButtonItemStylePlain
                                                                             target:self
                                                                             action:@selector(dismiss)];
-
+    
     self.view = [[UIView alloc] initWithFrame:[self contentFrame]];
     self.view.backgroundColor = [UVStyleSheet instance].loadingViewBackgroundColor;
 
@@ -99,6 +99,7 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
     _loader = [UVInitialLoadManager loadWithDelegate:self action:@selector(pushNextView)];
 }
 

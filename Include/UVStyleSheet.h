@@ -28,4 +28,7 @@
 @property (nonatomic, retain) UIColor *loadingViewBackgroundColor;
 @property (nonatomic, assign) UIStatusBarStyle preferredStatusBarStyle;
 
+@property (nonatomic) UIColor *themeColorRed, *themeColorGray;
+
+
 @end

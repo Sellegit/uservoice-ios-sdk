@@ -13,6 +13,12 @@ namespace UserVoiceBinding {
 		[Export ("tintColor", ArgumentSemantic.Retain)]
 		UIColor TintColor { get; set; }
 
+    [Export ("themeColorRed")]
+    UIColor ThemeColorRed { get; set; }
+
+    [Export ("themeColorGray")]
+    UIColor ThemeColorGray { get; set; }
+
 		[Export ("tableViewBackgroundColor", ArgumentSemantic.Retain)]
 		UIColor TableViewBackgroundColor { get; set; }
 

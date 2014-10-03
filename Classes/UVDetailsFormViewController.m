@@ -9,7 +9,7 @@
 #import "UVDetailsFormViewController.h"
 #import "UVValueSelectViewController.h"
 #import "UVStyleSheet.h"
-
+#import "UVUtils.h"
 #define LABEL 100
 #define VALUE 101
 #define TEXT 102
@@ -19,6 +19,7 @@
 #pragma mark ===== Basic View Methods =====
 
 - (void)loadView {
+    [UVUtils applyStylesheet:[UVStyleSheet customInstance] ToNavigationController:self.navigationController];
     [self registerForKeyboardNotifications];
     [self setupGroupedTableView];
     self.navigationItem.title = NSLocalizedStringFromTableInBundle(@"Additional Details", @"UserVoice", [UserVoice bundle], nil);
@@ -26,6 +27,7 @@
                                                                               style:UIBarButtonItemStyleDone
                                                                              target:self
                                                                              action:@selector(send)];
+
     if (_helpText) {
         UIView *help = [UIView new];
         help.frame = CGRectMake(0, 0, 0, 80);
@@ -71,7 +73,7 @@
     }
     
     UITableViewCell *cell = [self createCellForIdentifier:identifier tableView:theTableView indexPath:indexPath style:UITableViewCellStyleDefault selectable:selectable];
-    
+    cell.textLabel.font = [UVStyleSheet styleSheetFontOfSize:13];
     return cell;
 }
 
@@ -116,7 +118,7 @@
     UILabel *value = [UILabel new];
     value.tag = VALUE;
     value.numberOfLines = 0;
-    value.font = [UVStyleSheet styleSheetFontOfSize:16];
+    value.font = [UVStyleSheet styleSheetFontOfSize:13];
     [self configureView:cell.contentView
                subviews:NSDictionaryOfVariableBindings(label, value)
             constraints:@[@"|-16-[label]-|", @"|-16-[value]-|", @"V:|-10-[label]-6-[value]"]
@@ -128,6 +130,8 @@
     NSDictionary *field = _fields[indexPath.row];
     UILabel *label = (UILabel *)[cell viewWithTag:LABEL];
     UILabel *value = (UILabel *)[cell viewWithTag:VALUE];
+    label.font = [UVStyleSheet styleSheetFontOfSize:13];
+    value.font = [UVStyleSheet styleSheetFontOfSize:13];
     label.text = field[@"required"] ? [NSString stringWithFormat:NSLocalizedStringFromTableInBundle(@"%@ (required)", @"UserVoice", [UserVoice bundle], nil), field[@"name"]] : field[@"name"];
     if (_selectedFieldValues[field[@"name"]]) {
         value.text = _selectedFieldValues[field[@"name"]][@"label"];
@@ -146,6 +150,7 @@
         label.textColor = label.tintColor;
     }
     UITextField *text = [UITextField new];
+    text.font = [UVStyleSheet styleSheetFontOfSize:14];
     text.tag = TEXT;
     text.borderStyle = UITextBorderStyleNone;
     text.returnKeyType = UIReturnKeyDone;
@@ -159,6 +164,7 @@
     NSDictionary *field = _fields[indexPath.row];
     UILabel *label = (UILabel *)[cell viewWithTag:LABEL];
     UITextField *text = (UITextField *)[cell viewWithTag:TEXT];
+    text.font = [UVStyleSheet styleSheetFontOfSize:13];
     label.text = field[@"required"] ? [NSString stringWithFormat:NSLocalizedStringFromTableInBundle(@"%@ (required)", @"UserVoice", [UserVoice bundle], nil), field[@"name"]] : field[@"name"];
     text.text = _selectedFieldValues[field[@"name"]][@"label"];
     [[NSNotificationCenter defaultCenter] addObserverForName:UITextFieldTextDidChangeNotification object:text queue:nil usingBlock:^(NSNotification *note) {
@@ -172,11 +178,23 @@
     _emailField.autocorrectionType = UITextAutocorrectionTypeNo;
     _emailField.autocapitalizationType = UITextAutocapitalizationTypeNone;
     _emailField.text = self.userEmail;
+    _emailField.font = [UVStyleSheet styleSheetFontOfSize:13];
+    for (UIView *aView in cell.contentView.subviews) {
+        if ([aView isKindOfClass:[UILabel class]]) {
+            ((UILabel*)aView).font = [UVStyleSheet styleSheetFontOfSize:14];
+        }
+    }
 }
 
 - (void)initCellForName:(UITableViewCell *)cell indexPath:(NSIndexPath *)indexPath {
     self.nameField = [self configureView:cell.contentView label:NSLocalizedStringFromTableInBundle(@"Name", @"UserVoice", [UserVoice bundle], nil) placeholder:NSLocalizedStringFromTableInBundle(@"“Anonymous”", @"UserVoice", [UserVoice bundle], nil)];
     _nameField.text = self.userName;
+    _nameField.font = [UVStyleSheet styleSheetFontOfSize:13];
+    for (UIView *aView in cell.contentView.subviews) {
+        if ([aView isKindOfClass:[UILabel class]]) {
+            ((UILabel*)aView).font = [UVStyleSheet styleSheetFontOfSize:14];
+        }
+    }
 }
 
 #pragma mark ===== Misc =====
@@ -198,6 +216,7 @@
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:_sendTitle style:UIBarButtonItemStyleDone target:self action:@selector(send)];
     self.navigationItem.leftBarButtonItem = nil;
     self.navigationItem.hidesBackButton = NO;
+    self.navigationItem.backBarButtonItem.tintColor = [UVStyleSheet customInstance].themeColorGray;
 }
 
 - (void)dismiss {
