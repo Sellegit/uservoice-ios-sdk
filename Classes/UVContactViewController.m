@@ -67,7 +67,10 @@
                                                                              target:self
                                                                              action:@selector(next)];
     [self loadDraft];
+    [self.navigationItem.rightBarButtonItem setTitleTextAttributes:@{NSFontAttributeName:[UVStyleSheet customInstance].navigationBarFont} forState:UIControlStateNormal];
+    self.navigationItem.rightBarButtonItem.tintColor = [UVStyleSheet customInstance].themeColorRed;
     self.navigationItem.rightBarButtonItem.enabled = ([_fieldsView.textView.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]].length > 0);
+    
     self.view = view;
 }
 
@@ -79,6 +82,10 @@
 - (void)textViewDidChange:(UVTextView *)theTextEditor {
     NSString *text = [theTextEditor.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
     self.navigationItem.rightBarButtonItem.enabled = (text.length > 0);
+//    if(text.length > 0){
+//        self.navigationItem.rightBarButtonItem.tintColor = [UVStyleSheet customInstance].themeColorRed;
+    
+//    }
     _instantAnswerManager.searchText = text;
 }
 

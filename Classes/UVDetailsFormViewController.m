@@ -27,6 +27,8 @@
                                                                               style:UIBarButtonItemStyleDone
                                                                              target:self
                                                                              action:@selector(send)];
+    [self.navigationItem.rightBarButtonItem setTitleTextAttributes:@{NSFontAttributeName:[UVStyleSheet customInstance].navigationBarFont} forState:UIControlStateNormal];
+    self.navigationItem.rightBarButtonItem.tintColor = [UVStyleSheet customInstance].themeColorRed;
 
     if (_helpText) {
         UIView *help = [UIView new];
@@ -174,6 +176,7 @@
 
 - (void)initCellForEmail:(UITableViewCell *)cell indexPath:(NSIndexPath *)indexPath {
     self.emailField = [self configureView:cell.contentView label:NSLocalizedStringFromTableInBundle(@"Email", @"UserVoice", [UserVoice bundle], nil) placeholder:NSLocalizedStringFromTableInBundle(@"(required)", @"UserVoice", [UserVoice bundle], nil)];
+    _emailField.tintColor = [UVStyleSheet customInstance].themeColorRed;
     _emailField.keyboardType = UIKeyboardTypeEmailAddress;
     _emailField.autocorrectionType = UITextAutocorrectionTypeNo;
     _emailField.autocapitalizationType = UITextAutocapitalizationTypeNone;
@@ -190,6 +193,7 @@
     self.nameField = [self configureView:cell.contentView label:NSLocalizedStringFromTableInBundle(@"Name", @"UserVoice", [UserVoice bundle], nil) placeholder:NSLocalizedStringFromTableInBundle(@"“Anonymous”", @"UserVoice", [UserVoice bundle], nil)];
     _nameField.text = self.userName;
     _nameField.font = [UVStyleSheet styleSheetFontOfSize:13];
+    _nameField.tintColor = [UVStyleSheet customInstance].themeColorRed;
     for (UIView *aView in cell.contentView.subviews) {
         if ([aView isKindOfClass:[UILabel class]]) {
             ((UILabel*)aView).font = [UVStyleSheet styleSheetFontOfSize:14];

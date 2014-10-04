@@ -21,10 +21,12 @@
         
         self.contentSize = CGSizeMake(0, 20);
         self.font = [UVStyleSheet styleSheetFontOfSize:15];
+        self.tintColor = [UVStyleSheet customInstance].themeColorRed;
         _placeholderLabel = [UILabel new];
         _placeholderLabel.font = self.font;
         _placeholderLabel.textColor = IOS7 ? [UIColor colorWithRed:0.78f green:0.78f blue:0.80f alpha:1.0f] : [UIColor colorWithWhite:0.702f alpha:1.0f];
         _placeholderLabel.translatesAutoresizingMaskIntoConstraints = NO;
+        [self addSubview:_placeholderLabel];
     }
     return self;
 }
@@ -50,10 +52,10 @@
 
 - (void)updateShouldDrawPlaceholder {
     if (_added && self.text.length != 0) {
-        [_placeholderLabel removeFromSuperview];
+        [_placeholderLabel setHidden:YES];
         _added = NO;
     } else if (!_added && self.text.length == 0) {
-        [self addSubview:_placeholderLabel];
+        [self.placeholderLabel setHidden:NO];
         _added = YES;
     }
 }
