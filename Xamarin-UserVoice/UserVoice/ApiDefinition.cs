@@ -19,6 +19,9 @@ namespace UserVoiceBinding {
     [Export ("themeColorGray")]
     UIColor ThemeColorGray { get; set; }
 
+    [Export ("themeColorCloseToBlack")]
+    UIColor ThemeColorCloseToBlack { get; set; }
+
 		[Export ("tableViewBackgroundColor", ArgumentSemantic.Retain)]
 		UIColor TableViewBackgroundColor { get; set; }
 

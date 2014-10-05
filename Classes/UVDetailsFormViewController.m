@@ -220,7 +220,7 @@
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:_sendTitle style:UIBarButtonItemStyleDone target:self action:@selector(send)];
     self.navigationItem.leftBarButtonItem = nil;
     self.navigationItem.hidesBackButton = NO;
-    self.navigationItem.backBarButtonItem.tintColor = [UVStyleSheet customInstance].themeColorGray;
+    self.navigationItem.backBarButtonItem.tintColor = [UVStyleSheet customInstance].themeColorCloseToBlack;
 }
 
 - (void)dismiss {

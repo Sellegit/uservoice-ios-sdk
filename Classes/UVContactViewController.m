@@ -47,7 +47,7 @@
     [titleLabel sizeToFit];
     
     self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedStringFromTableInBundle(@"Back", @"UserVoice", [UserVoice bundle], nil) style:UIBarButtonItemStylePlain target:nil action:nil];
-    self.navigationItem.backBarButtonItem.tintColor = [UVStyleSheet customInstance].themeColorGray;
+    self.navigationItem.backBarButtonItem.tintColor = [UVStyleSheet customInstance].themeColorCloseToBlack;
 
     // using a fields view with no fields extra still gives us better scroll handling
     _fieldsView = [UVTextWithFieldsView new];

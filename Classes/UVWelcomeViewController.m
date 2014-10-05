@@ -176,7 +176,7 @@
         else if ([self showArticles])
             return [[UVSession currentSession].articles count];
         else
-            return [[UVSession currentSession].topics count] + 1;
+            return [[UVSession currentSession].topics count];
     }
 }
 

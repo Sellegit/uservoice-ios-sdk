@@ -27,9 +27,11 @@
     style.navigationBarFont = [UIFont systemFontOfSize:10];
     style.themeColorRed = [UIColor colorWithRed:(float)242/255 green:(float)46/255 blue:(float)89/255 alpha:1];
     style.themeColorGray = [UIColor colorWithRed:118/255 green:118/255 blue:118/255 alpha:1];
-    style.navigationBarTintColor = style.themeColorGray;
+    style.themeColorCloseToBlack = [UIColor colorWithRed:4/255 green:4/255 blue:4/255 alpha:1];
+
+    style.navigationBarTintColor = style.themeColorCloseToBlack;
     [UserVoice setStyleSheet:style];
-    [[UINavigationBar appearance] setTintColor:style.themeColorGray];
+    [[UINavigationBar appearance] setTintColor:style.themeColorCloseToBlack];
     [UserVoice presentUserVoiceInterfaceForParentViewController:self];
 }
 

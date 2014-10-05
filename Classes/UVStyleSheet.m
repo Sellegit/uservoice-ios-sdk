@@ -29,7 +29,7 @@ static UVStyleSheet *customInstance;
 +(void)setCustomInstance:(UVStyleSheet*)style{
     customInstance = style;
     [[UIBarButtonItem appearance] setTitleTextAttributes:@{NSFontAttributeName:customInstance.navigationBarFont,
-                                                           NSForegroundColorAttributeName:[UVStyleSheet customInstance].themeColorGray} forState:UIControlStateNormal];
+                                                           NSForegroundColorAttributeName:[UVStyleSheet customInstance].themeColorCloseToBlack  } forState:UIControlStateNormal];
 }
 
 +(UIFont*)styleSheetFontOfSize:(CGFloat)size{

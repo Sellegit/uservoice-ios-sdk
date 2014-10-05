@@ -36,7 +36,7 @@
     } else {
         linkColor = @"default";
     }
-    NSString *html = [NSString stringWithFormat:@"<html><head><link rel=\"stylesheet\" type=\"text/css\" href=\"http://localhost:8000/style.css\"/><style>a { color: %@; }</style><style></style></head><body class=\"typeset\" style=\"font-family: ProximaNova; margin: 1em; font-size: 15px\"><h5 style='font-weight: normal; color: #999; font-size: 13px'>%@</h5><h3 style='margin-top: 10px; margin-bottom: 20px; font-size: 18px; font-family: ProximaNova; font-weight: normal; line-height: 1.3'>%@</h3>%@</body><script src='http://code.jquery.com/jquery-1.10.2.js' type='text/javascript'></script><script src='http://localhost:8000/func.js' type='text/javascript'></script><script>tweak_font();</script></html>", linkColor, section, _article.question, _article.answerHTML];
+    NSString *html = [NSString stringWithFormat:@"<html><head><link rel=\"stylesheet\" type=\"text/css\" href=\"https://peachnow.com/uservoice.css\"/><style>a { color: %@; }</style><style></style></head><body class=\"typeset\" style=\"font-family: ProximaNova; margin: 1em; font-size: 15px\"><h5 style='font-weight: normal; color: #999; font-size: 13px'>%@</h5><h3 style='margin-top: 10px; margin-bottom: 20px; font-size: 18px; font-family: ProximaNova; font-weight: normal; line-height: 1.3'>%@</h3>%@</body><script src='http://code.jquery.com/jquery-1.10.2.js' type='text/javascript'></script><script src='https://peachnow.com/uservoice.js' type='text/javascript'></script><script>tweak_font();</script></html>", linkColor, @"", _article.question, _article.answerHTML];
     
 
     _webView.backgroundColor = [UIColor whiteColor];
@@ -84,13 +84,13 @@
             constraints:@[@"V:|[_webView]|", @"V:[footer]|", @"|[_webView]|", @"|[footer]|"]];
     [self.view addConstraint:[NSLayoutConstraint constraintWithItem:footer attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0 constant:footerHeight]];
 //    [self.view bringSubviewToFront:footer];
-    [self performSelector:@selector(haha) withObject:nil afterDelay:5];
+//    [self performSelector:@selector(haha) withObject:nil afterDelay:5];
 }
 
--(void)haha{
-    NSString *a = [_webView stringByEvaluatingJavaScriptFromString:@"document.body.innerHTML"];
-    NSLog(@"%@",a);
-}
+//-(void)haha{
+//    NSString *a = [_webView stringByEvaluatingJavaScriptFromString:@"document.body.innerHTML"];
+//    NSLog(@"%@",a);
+//}
 
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
     if (_helpfulPrompt) {
