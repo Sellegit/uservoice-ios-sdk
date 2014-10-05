@@ -11,6 +11,7 @@
 @implementation UVStyleSheet
 
 static UVStyleSheet *instance;
+static UVStyleSheet *customInstance;
 
 + (UVStyleSheet *)instance {
     if (instance == nil) {
@@ -19,6 +20,23 @@ static UVStyleSheet *instance;
         instance.preferredStatusBarStyle = UIStatusBarStyleDefault;
     }
     return instance;
+}
+
++ (UVStyleSheet *)customInstance{
+    return customInstance;
+}
+
++(void)setCustomInstance:(UVStyleSheet*)style{
+    customInstance = style;
+    [[UIBarButtonItem appearance] setTitleTextAttributes:@{NSFontAttributeName:customInstance.navigationBarFont,
+                                                           NSForegroundColorAttributeName:[UVStyleSheet customInstance].themeColorCloseToBlack  } forState:UIControlStateNormal];
+}
+
++(UIFont*)styleSheetFontOfSize:(CGFloat)size{
+    if (customInstance) {
+        return [customInstance.navigationBarFont fontWithSize:size];
+    }
+    return [UIFont systemFontOfSize:size];
 }
 
 @end

@@ -21,6 +21,13 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		306FAD4719D12C000033F479 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 306FAD4619D12C000033F479 /* main.m */; };
+		306FAD4A19D12C000033F479 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 306FAD4919D12C000033F479 /* AppDelegate.m */; };
+		306FAD4D19D12C000033F479 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 306FAD4C19D12C000033F479 /* ViewController.m */; };
+		306FAD5019D12C000033F479 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 306FAD4E19D12C000033F479 /* Main.storyboard */; };
+		306FAD5219D12C000033F479 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 306FAD5119D12C000033F479 /* Images.xcassets */; };
+		306FAD5519D12C000033F479 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 306FAD5319D12C000033F479 /* LaunchScreen.xib */; };
+		306FAD6C19D12D4C0033F479 /* libUserVoice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D2AAC07E0554694100DB518D /* libUserVoice.a */; };
 		3A37C3D11929A96B00942423 /* UVAttachment.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A37C3CF1929A96B00942423 /* UVAttachment.h */; };
 		3A37C3D21929A96B00942423 /* UVAttachment.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A37C3D01929A96B00942423 /* UVAttachment.m */; };
 		6474C33614BB8D5D00F6A2F0 /* UserVoice.h in Headers */ = {isa = PBXBuildFile; fileRef = 6474C33714BB8D5D00F6A2F0 /* UserVoice.h */; };
@@ -78,6 +85,12 @@
 		ACEE442F10AB370F003D8751 /* UVComment.m in Sources */ = {isa = PBXBuildFile; fileRef = ACEE442D10AB370F003D8751 /* UVComment.m */; };
 		ACEE461710ACC158003D8751 /* UVBaseViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = ACEE461510ACC158003D8751 /* UVBaseViewController.h */; };
 		ACEE461810ACC158003D8751 /* UVBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACEE461610ACC158003D8751 /* UVBaseViewController.m */; };
+		B6E064E619DDDBDA00AFBF04 /* uv_article@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D92767FF1559B0E900E17EF1 /* uv_article@2x.png */; };
+		B6E064E719DDDBDA00AFBF04 /* uv_heart@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D94427991804A035002F716B /* uv_heart@2x.png */; };
+		B6E064E819DDDBDA00AFBF04 /* uv_idea@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D92768011559B0E900E17EF1 /* uv_idea@2x.png */; };
+		B6E064E919DDDBDA00AFBF04 /* uv_article.png in Resources */ = {isa = PBXBuildFile; fileRef = D92767FE1559B0E800E17EF1 /* uv_article.png */; };
+		B6E064EA19DDDBDA00AFBF04 /* uv_heart.png in Resources */ = {isa = PBXBuildFile; fileRef = D94427981804A035002F716B /* uv_heart.png */; };
+		B6E064EB19DDDBDA00AFBF04 /* uv_idea.png in Resources */ = {isa = PBXBuildFile; fileRef = D92768001559B0E900E17EF1 /* uv_idea.png */; };
 		C184F7EA17B5AD7C00DBB38C /* UVCallback.h in Headers */ = {isa = PBXBuildFile; fileRef = C184F7E817B5AD7C00DBB38C /* UVCallback.h */; };
 		C184F7EB17B5AD7C00DBB38C /* UVCallback.m in Sources */ = {isa = PBXBuildFile; fileRef = C184F7E917B5AD7C00DBB38C /* UVCallback.m */; };
 		D24540C011B095AA00C7E4BA /* UVSubdomain.h in Headers */ = {isa = PBXBuildFile; fileRef = D24540BE11B095AA00C7E4BA /* UVSubdomain.h */; };
@@ -157,7 +170,27 @@
 		D9F2060414C08A8100F4441E /* UVDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = D9F2060314C08A8100F4441E /* UVDelegate.h */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		306FAD6A19D12CEC0033F479 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D;
+			remoteInfo = UserVoice;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		306FAD4219D12C000033F479 /* UVTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UVTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		306FAD4519D12C000033F479 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		306FAD4619D12C000033F479 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		306FAD4819D12C000033F479 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		306FAD4919D12C000033F479 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		306FAD4B19D12C000033F479 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		306FAD4C19D12C000033F479 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		306FAD4F19D12C000033F479 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		306FAD5119D12C000033F479 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		306FAD5419D12C000033F479 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		3A37C3CF1929A96B00942423 /* UVAttachment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UVAttachment.h; sourceTree = "<group>"; };
 		3A37C3D01929A96B00942423 /* UVAttachment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UVAttachment.m; sourceTree = "<group>"; };
 		6474C33714BB8D5D00F6A2F0 /* UserVoice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = UserVoice.h; path = Include/UserVoice.h; sourceTree = SOURCE_ROOT; };
@@ -313,6 +346,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		306FAD3F19D12C000033F479 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				306FAD6C19D12D4C0033F479 /* libUserVoice.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D2AAC07C0554694100DB518D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -330,6 +371,7 @@
 			isa = PBXGroup;
 			children = (
 				D2AAC07E0554694100DB518D /* libUserVoice.a */,
+				306FAD4219D12C000033F479 /* UVTest.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -342,6 +384,7 @@
 				08FB77AEFE84172EC02AAC07 /* Classes */,
 				AC312517109231A200000D5F /* Vendor */,
 				32C88DFF0371C24200C91783 /* Other Sources */,
+				306FAD4319D12C000033F479 /* UVTest */,
 				0867D69AFE84028FC02AAC07 /* Frameworks */,
 				034768DFFF38A50411DB9C8B /* Products */,
 				AC61BF4B1089119500BCD3F2 /* CoreGraphics.framework */,
@@ -394,6 +437,30 @@
 				D9FAD0E618AE7DBB00EC193B /* UVModelDelegate.h */,
 			);
 			path = Classes;
+			sourceTree = "<group>";
+		};
+		306FAD4319D12C000033F479 /* UVTest */ = {
+			isa = PBXGroup;
+			children = (
+				306FAD4819D12C000033F479 /* AppDelegate.h */,
+				306FAD4919D12C000033F479 /* AppDelegate.m */,
+				306FAD4B19D12C000033F479 /* ViewController.h */,
+				306FAD4C19D12C000033F479 /* ViewController.m */,
+				306FAD4E19D12C000033F479 /* Main.storyboard */,
+				306FAD5119D12C000033F479 /* Images.xcassets */,
+				306FAD5319D12C000033F479 /* LaunchScreen.xib */,
+				306FAD4419D12C000033F479 /* Supporting Files */,
+			);
+			path = UVTest;
+			sourceTree = "<group>";
+		};
+		306FAD4419D12C000033F479 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				306FAD4519D12C000033F479 /* Info.plist */,
+				306FAD4619D12C000033F479 /* main.m */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		32C88DFF0371C24200C91783 /* Other Sources */ = {
@@ -737,6 +804,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		306FAD4119D12C000033F479 /* UVTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 306FAD6819D12C010033F479 /* Build configuration list for PBXNativeTarget "UVTest" */;
+			buildPhases = (
+				306FAD3E19D12C000033F479 /* Sources */,
+				306FAD3F19D12C000033F479 /* Frameworks */,
+				306FAD4019D12C000033F479 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				306FAD6B19D12CEC0033F479 /* PBXTargetDependency */,
+			);
+			name = UVTest;
+			productName = UVTest;
+			productReference = 306FAD4219D12C000033F479 /* UVTest.app */;
+			productType = "com.apple.product-type.application";
+		};
 		D2AAC07D0554694100DB518D /* UserVoice */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "UserVoice" */;
@@ -762,6 +847,12 @@
 			attributes = {
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "UserVoice Inc";
+				TargetAttributes = {
+					306FAD4119D12C000033F479 = {
+						CreatedOnToolsVersion = 6.0.1;
+						DevelopmentTeam = W2QYWGEPXJ;
+					};
+				};
 			};
 			buildConfigurationList = 1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "UserVoice" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -778,6 +869,7 @@
 				nl,
 				"zh-Hant",
 				de,
+				Base,
 			);
 			mainGroup = 0867D691FE84028FC02AAC07 /* UserVoice */;
 			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
@@ -786,9 +878,29 @@
 			targets = (
 				D2AAC07D0554694100DB518D /* UserVoice */,
 				3094BA01197A5F2D000973EA /* UniversalLib */,
+				306FAD4119D12C000033F479 /* UVTest */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		306FAD4019D12C000033F479 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B6E064E619DDDBDA00AFBF04 /* uv_article@2x.png in Resources */,
+				B6E064E719DDDBDA00AFBF04 /* uv_heart@2x.png in Resources */,
+				B6E064E819DDDBDA00AFBF04 /* uv_idea@2x.png in Resources */,
+				B6E064E919DDDBDA00AFBF04 /* uv_article.png in Resources */,
+				B6E064EA19DDDBDA00AFBF04 /* uv_heart.png in Resources */,
+				B6E064EB19DDDBDA00AFBF04 /* uv_idea.png in Resources */,
+				306FAD5019D12C000033F479 /* Main.storyboard in Resources */,
+				306FAD5519D12C000033F479 /* LaunchScreen.xib in Resources */,
+				306FAD5219D12C000033F479 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
 		3094BA06197A5F57000973EA /* ShellScript */ = {
@@ -802,11 +914,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# define output folder environment variable\nUNIVERSAL_OUTPUTFOLDER=${BUILD_DIR}/${CONFIGURATION}-universal\n\n# Step 1. Build Device and Simulator versions\nxcodebuild -target UserVoice ONLY_ACTIVE_ARCH=NO -configuration ${CONFIGURATION} -sdk iphoneos  BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\"\nxcodebuild -target USerVoice -configuration ${CONFIGURATION} -sdk iphonesimulator -arch i386 BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\"\n\n# make sure the output directory exists\nmkdir -p \"${UNIVERSAL_OUTPUTFOLDER}\"\n\n# Step 2. Create universal binary file using lipo\nlipo -create -output \"${UNIVERSAL_OUTPUTFOLDER}/lib${PROJECT_NAME}.a\" \"${BUILD_DIR}/${CONFIGURATION}-iphoneos/lib${PROJECT_NAME}.a\" \"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/lib${PROJECT_NAME}.a\"\n\n# Last touch. copy the header files. Just for convenience\ncp -R \"${BUILD_DIR}/${CONFIGURATION}-iphoneos/include\" \"${UNIVERSAL_OUTPUTFOLDER}/\"";
+			shellScript = "# define output folder environment variable\nUNIVERSAL_OUTPUTFOLDER=${BUILD_DIR}/${CONFIGURATION}-universal\n\n# Step 1. Build Device and Simulator versions\nxcodebuild -target UserVoice ONLY_ACTIVE_ARCH=NO -configuration ${CONFIGURATION} -sdk iphoneos  BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\"\nxcodebuild -target UserVoice -configuration ${CONFIGURATION} -sdk iphonesimulator -arch i386 BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\"\n\n# make sure the output directory exists\nmkdir -p \"${UNIVERSAL_OUTPUTFOLDER}\"\n\n# Step 2. Create universal binary file using lipo\nlipo -create -output \"${UNIVERSAL_OUTPUTFOLDER}/lib${PROJECT_NAME}.a\" \"${BUILD_DIR}/${CONFIGURATION}-iphoneos/lib${PROJECT_NAME}.a\" \"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/lib${PROJECT_NAME}.a\"\n\n# Last touch. copy the header files. Just for convenience\ncp -R \"${BUILD_DIR}/${CONFIGURATION}-iphoneos/include\" \"${UNIVERSAL_OUTPUTFOLDER}/\"";
 		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		306FAD3E19D12C000033F479 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				306FAD4D19D12C000033F479 /* ViewController.m in Sources */,
+				306FAD4A19D12C000033F479 /* AppDelegate.m in Sources */,
+				306FAD4719D12C000033F479 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D2AAC07B0554694100DB518D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -878,7 +1000,31 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		306FAD6B19D12CEC0033F479 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D2AAC07D0554694100DB518D /* UserVoice */;
+			targetProxy = 306FAD6A19D12CEC0033F479 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
+		306FAD4E19D12C000033F479 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				306FAD4F19D12C000033F479 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		306FAD5319D12C000033F479 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				306FAD5419D12C000033F479 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
 		BC1F064116BBF700006E9027 /* UserVoice.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -1114,9 +1260,119 @@
 			};
 			name = Release;
 		};
+		306FAD6219D12C010033F479 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = UVTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		306FAD6319D12C010033F479 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = UVTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		306FAD6419D12C010033F479 /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = UVTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Distribution;
+		};
 		3094BA02197A5F2D000973EA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -1124,6 +1380,7 @@
 		3094BA03197A5F2D000973EA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -1131,6 +1388,7 @@
 		3094BA04197A5F2D000973EA /* Distribution */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Distribution;
@@ -1247,6 +1505,16 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		306FAD6819D12C010033F479 /* Build configuration list for PBXNativeTarget "UVTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				306FAD6219D12C010033F479 /* Debug */,
+				306FAD6319D12C010033F479 /* Release */,
+				306FAD6419D12C010033F479 /* Distribution */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		3094BA05197A5F2D000973EA /* Build configuration list for PBXAggregateTarget "UniversalLib" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1255,6 +1523,7 @@
 				3094BA04197A5F2D000973EA /* Distribution */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -12,6 +12,9 @@
 @interface UVStyleSheet : NSObject 
 
 + (UVStyleSheet *)instance;
++ (UVStyleSheet *)customInstance;
++(void)setCustomInstance:(UVStyleSheet*)style;
++(UIFont*)styleSheetFontOfSize:(CGFloat)size;
 
 @property (nonatomic, retain) UIColor *tintColor;
 @property (nonatomic, retain) UIColor *tableViewBackgroundColor;
@@ -24,5 +27,8 @@
 @property (nonatomic, retain) UIColor *navigationBarActivityIndicatorColor;
 @property (nonatomic, retain) UIColor *loadingViewBackgroundColor;
 @property (nonatomic, assign) UIStatusBarStyle preferredStatusBarStyle;
+
+@property (nonatomic) UIColor *themeColorRed, *themeColorGray, *themeColorCloseToBlack;
+
 
 @end

@@ -13,6 +13,15 @@ namespace UserVoiceBinding {
 		[Export ("tintColor", ArgumentSemantic.Retain)]
 		UIColor TintColor { get; set; }
 
+    [Export ("themeColorRed")]
+    UIColor ThemeColorRed { get; set; }
+
+    [Export ("themeColorGray")]
+    UIColor ThemeColorGray { get; set; }
+
+    [Export ("themeColorCloseToBlack")]
+    UIColor ThemeColorCloseToBlack { get; set; }
+
 		[Export ("tableViewBackgroundColor", ArgumentSemantic.Retain)]
 		UIColor TableViewBackgroundColor { get; set; }
 
@@ -160,8 +169,11 @@ namespace UserVoiceBinding {
 		[Static, Export ("version")]
 		string Version { get; }
 
-		[Static, Export ("setExternalId:forScope:")]
-		void SetExternalId (string identifier, string scope);
+		[Static, Export ("setStyleSheet:")]
+    void SetStyleSheet (UVStyleSheet style);
+
+    [Static, Export ("setExternalId:forScope:")]
+    void SetExternalId (string identifier, string scope);
 
 		[Static, Export ("track:")]
 		void Track (string e);

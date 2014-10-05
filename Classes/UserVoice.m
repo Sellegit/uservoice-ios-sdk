@@ -27,6 +27,7 @@ static NSBundle *userVoiceBundle;
     [UVBabayaga instance].userTraits = [config traits];
     [UVSession currentSession].config = config;
     [UVBabayaga track:VIEW_APP];
+    
 }
 
 + (NSBundle *)bundle {
@@ -45,7 +46,13 @@ static NSBundle *userVoiceBundle;
 + (UINavigationController *)getNavigationControllerForUserVoiceControllers:(NSArray *)viewControllers {
     [UVSession currentSession].isModal = YES;
     UINavigationController *navigationController = [UVNavigationController new];
-    [UVUtils applyStylesheetToNavigationController:navigationController];
+    UVStyleSheet *style = [UVStyleSheet customInstance];
+    if (style) {
+        [UVUtils applyStylesheet:style ToNavigationController:navigationController];
+    }
+    else{
+        [UVUtils applyStylesheetToNavigationController:navigationController];
+    }
     navigationController.viewControllers = viewControllers;
     navigationController.modalPresentationStyle = UIModalPresentationFormSheet;
     return navigationController;
@@ -64,6 +71,7 @@ static NSBundle *userVoiceBundle;
     UVConfig *config = [UVConfig configWithSite:site andKey:key andSecret:secret];
     [self presentUserVoiceInterfaceForParentViewController:parentViewController andConfig:config];
 }
+
 
 + (void)presentUserVoiceModalViewControllerForParent:(UIViewController *)parentViewController andSite:(NSString *)site andKey:(NSString *)key andSecret:(NSString *)secret andSsoToken:(NSString *)token {
     UVConfig *config = [UVConfig configWithSite:site andKey:key andSecret:secret andSSOToken:token];
@@ -139,6 +147,10 @@ static NSBundle *userVoiceBundle;
 
 + (void)setDelegate:(id<UVDelegate>)delegate {
     userVoiceDelegate = delegate;
+}
+
++(void)setStyleSheet:(UVStyleSheet *)aStyle{
+    [UVStyleSheet setCustomInstance:aStyle];
 }
 
 + (id<UVDelegate>)delegate {

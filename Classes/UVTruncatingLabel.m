@@ -22,7 +22,7 @@
         [self addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(expandAndNotify)]];
         _moreLabel = [UILabel new];
         _moreLabel.text = NSLocalizedStringFromTableInBundle(@"more", @"UserVoice", [UserVoice bundle], nil);
-        _moreLabel.font = [UIFont systemFontOfSize:12];
+        _moreLabel.font = [UVStyleSheet styleSheetFontOfSize:12];
         _moreLabel.backgroundColor = [UIColor clearColor];
         if (IOS7) {
             _moreLabel.textColor = self.tintColor;

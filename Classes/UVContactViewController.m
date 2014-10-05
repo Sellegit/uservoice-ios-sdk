@@ -39,7 +39,15 @@
     _instantAnswerManager.deflectingType = @"Ticket";
 
     self.navigationItem.title = NSLocalizedStringFromTableInBundle(@"Send us a message", @"UserVoice", [UserVoice bundle], nil);
+    
+    UILabel *titleLabel = [UILabel new];
+    titleLabel.font = [UVStyleSheet customInstance].navigationBarFont;
+    titleLabel.text = NSLocalizedStringFromTableInBundle(@"Send us a message", @"UserVoice", [UserVoice bundle], nil);
+    self.navigationItem.titleView = titleLabel;
+    [titleLabel sizeToFit];
+    
     self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedStringFromTableInBundle(@"Back", @"UserVoice", [UserVoice bundle], nil) style:UIBarButtonItemStylePlain target:nil action:nil];
+    self.navigationItem.backBarButtonItem.tintColor = [UVStyleSheet customInstance].themeColorCloseToBlack;
 
     // using a fields view with no fields extra still gives us better scroll handling
     _fieldsView = [UVTextWithFieldsView new];
@@ -59,7 +67,10 @@
                                                                              target:self
                                                                              action:@selector(next)];
     [self loadDraft];
+    [self.navigationItem.rightBarButtonItem setTitleTextAttributes:@{NSFontAttributeName:[UVStyleSheet customInstance].navigationBarFont} forState:UIControlStateNormal];
+    self.navigationItem.rightBarButtonItem.tintColor = [UVStyleSheet customInstance].themeColorRed;
     self.navigationItem.rightBarButtonItem.enabled = ([_fieldsView.textView.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]].length > 0);
+    
     self.view = view;
 }
 
@@ -71,6 +82,10 @@
 - (void)textViewDidChange:(UVTextView *)theTextEditor {
     NSString *text = [theTextEditor.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
     self.navigationItem.rightBarButtonItem.enabled = (text.length > 0);
+//    if(text.length > 0){
+//        self.navigationItem.rightBarButtonItem.tintColor = [UVStyleSheet customInstance].themeColorRed;
+    
+//    }
     _instantAnswerManager.searchText = text;
 }
 

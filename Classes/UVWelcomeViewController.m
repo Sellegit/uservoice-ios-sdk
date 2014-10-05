@@ -39,9 +39,7 @@
 - (void)initCellForContact:(UITableViewCell *)cell indexPath:(NSIndexPath *)indexPath {
     cell.backgroundColor = [UIColor whiteColor];
     cell.textLabel.text = NSLocalizedStringFromTableInBundle(@"Send us a message", @"UserVoice", [UserVoice bundle], nil);
-    if (IOS7) {
-        cell.textLabel.textColor = cell.textLabel.tintColor;
-    }
+    cell.textLabel.textColor = [UVStyleSheet customInstance].themeColorRed;
 }
 
 - (void)initCellForForum:(UITableViewCell *)cell indexPath:(NSIndexPath *)indexPath {
@@ -58,6 +56,7 @@
         detail = [NSString stringWithFormat:NSLocalizedStringFromTableInBundle(@"%@ ideas", @"UserVoice", [UserVoice bundle], nil), [UVUtils formatInteger:[UVSession currentSession].forum.suggestionsCount]];
     }
     cell.detailTextLabel.text = detail;
+    cell.detailTextLabel.font = [UVStyleSheet styleSheetFontOfSize:14];
 }
 
 - (void)customizeCellForTopic:(UITableViewCell *)cell indexPath:(NSIndexPath *)indexPath {
@@ -68,7 +67,8 @@
     } else {
         UVHelpTopic *topic = [[UVSession currentSession].topics objectAtIndex:indexPath.row];
         cell.textLabel.text = topic.name;
-        cell.detailTextLabel.text = [NSString stringWithFormat:@"%d", (int)topic.articleCount];
+//        cell.detailTextLabel.text = [NSString stringWithFormat:@"%d", (int)topic.articleCount];
+//        cell.detailTextLabel.font = [UVStyleSheet styleSheetFontOfSize:14];
     }
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 }
@@ -112,69 +112,71 @@
 - (UITableViewCell *)tableView:(UITableView *)theTableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     NSString *identifier = @"";
     NSInteger style = UITableViewCellStyleValue1;
-    if (theTableView == _searchController.searchResultsTableView) {
-        id model = [self.searchResults objectAtIndex:indexPath.row];
-        if ([model isMemberOfClass:[UVArticle class]]) {
-            identifier = @"ArticleResult";
-        } else {
-            identifier = @"SuggestionResult";
-        }
-        style = UITableViewCellStyleDefault;
-    } else {
-        if (indexPath.section == 0 && indexPath.row == 0 && [UVSession currentSession].config.showContactUs)
+//    if (theTableView == _searchController.searchResultsTableView) {
+//        id model = [self.searchResults objectAtIndex:indexPath.row];
+//        if ([model isMemberOfClass:[UVArticle class]]) {
+//            identifier = @"ArticleResult";
+//        } else {
+//            identifier = @"SuggestionResult";
+//        }
+//        style = UITableViewCellStyleDefault;
+//    } else {
+        if (indexPath.section == 1 && indexPath.row == 0 && [UVSession currentSession].config.showContactUs)
             identifier = @"Contact";
-        else if (indexPath.section == 0 && [UVSession currentSession].config.showForum)
+        else if (indexPath.section == 1 && [UVSession currentSession].config.showForum)
             identifier = @"Forum";
         else if ([self showArticles])
             identifier = @"Article";
         else
             identifier = @"Topic";
-    }
+//    }
 
     return [self createCellForIdentifier:identifier tableView:theTableView indexPath:indexPath style:style selectable:YES];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (tableView == _searchController.searchResultsTableView) {
-        NSString *identifier;
-        id model = [self.searchResults objectAtIndex:indexPath.row];
-        if ([model isMemberOfClass:[UVArticle class]]) {
-            identifier = @"ArticleResult";
-        } else {
-            identifier = @"SuggestionResult";
-        }
-        return [self heightForDynamicRowWithReuseIdentifier:identifier indexPath:indexPath];
-    } else {
+//    if (tableView == _searchController.searchResultsTableView) {
+//        NSString *identifier;
+//        id model = [self.searchResults objectAtIndex:indexPath.row];
+//        if ([model isMemberOfClass:[UVArticle class]]) {
+//            identifier = @"ArticleResult";
+//        } else {
+//            identifier = @"SuggestionResult";
+//        }
+//        return [self heightForDynamicRowWithReuseIdentifier:identifier indexPath:indexPath];
+//    } else {
         return 44;
-    }
+//    }
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)theTableView {
-    if (theTableView == _searchController.searchResultsTableView) {
-        return 1;
-    } else {
-        int sections = 0;
-
-        if ([UVSession currentSession].config.showKnowledgeBase && ([[UVSession currentSession].topics count] > 0 || [[UVSession currentSession].articles count] > 0))
-            sections++;
-        
-        if ([UVSession currentSession].config.showForum || [UVSession currentSession].config.showContactUs)
-            sections++;
-
-        return sections;
-    }
+//    if (theTableView == _searchController.searchResultsTableView) {
+//        return 1;
+//    } else {
+//        int sections = 0;
+//
+//        if ([UVSession currentSession].config.showKnowledgeBase && ([[UVSession currentSession].topics count] > 0 || [[UVSession currentSession].articles count] > 0))
+//            sections++;
+//        
+//        if ([UVSession currentSession].config.showForum || [UVSession currentSession].config.showContactUs)
+//            sections++;
+//
+//        return sections;
+//    }
+    return 2;
 }
 
 - (NSInteger)tableView:(UITableView *)theTableView numberOfRowsInSection:(NSInteger)section {
     if (theTableView == _searchController.searchResultsTableView) {
         return self.searchResults.count;
     } else {
-        if (section == 0 && ([UVSession currentSession].config.showForum || [UVSession currentSession].config.showContactUs))
-            return ([UVSession currentSession].config.showForum && [UVSession currentSession].config.showContactUs) ? 2 : 1;
+        if (section == 1 && ([UVSession currentSession].config.showForum || [UVSession currentSession].config.showContactUs))
+//            return ([UVSession currentSession].config.showForum && [UVSession currentSession].config.showContactUs) ? 2 : 1;
+            return 1;
         else if ([self showArticles])
             return [[UVSession currentSession].articles count];
         else
-            return [[UVSession currentSession].topics count] + 1;
+            return [[UVSession currentSession].topics count];
     }
 }
 
@@ -186,9 +188,9 @@
         }
         [_instantAnswerManager pushViewFor:[self.searchResults objectAtIndex:indexPath.row] parent:self];
     } else {
-        if (indexPath.section == 0 && indexPath.row == 0 && [UVSession currentSession].config.showContactUs) {
+        if (indexPath.section == 1 && indexPath.row == 0 && [UVSession currentSession].config.showContactUs) {
             [self presentModalViewController:[UVContactViewController new]];
-        } else if (indexPath.section == 0 && [UVSession currentSession].config.showForum) {
+        } else if (indexPath.section == 1 && [UVSession currentSession].config.showForum) {
             UVSuggestionListViewController *next = [UVSuggestionListViewController new];
             [self.navigationController pushViewController:next animated:YES];
         } else if ([self showArticles]) {
@@ -208,16 +210,17 @@
 }
 
 - (NSString *)tableView:(UITableView *)theTableView titleForHeaderInSection:(NSInteger)section {
-    if (section == 0 && ([UVSession currentSession].config.showForum || [UVSession currentSession].config.showContactUs))
+    if (section == 1 && ([UVSession currentSession].config.showForum || [UVSession currentSession].config.showContactUs))
         return nil;
-    else if ([UVSession currentSession].config.topicId)
-        return [((UVHelpTopic *)[[UVSession currentSession].topics objectAtIndex:0]) name];
-    else
+    else if(section == 0)
         return NSLocalizedStringFromTableInBundle(@"Knowledge Base", @"UserVoice", [UserVoice bundle], nil);
+    else if([UVSession currentSession].config.topicId)
+        return [((UVHelpTopic *)[[UVSession currentSession].topics objectAtIndex:0]) name];
+    return nil;
 }
 
 - (CGFloat)tableView:(UITableView *)theTableView heightForHeaderInSection:(NSInteger)section {
-    return theTableView == _searchController.searchResultsTableView ? 0 : 30;
+    return theTableView == _searchController.searchResultsTableView ? 0 : 10;
 }
 
 - (void)logoTapped {
@@ -323,6 +326,7 @@
         _searchController.delegate = self;
         _searchController.searchResultsDelegate = self;
         _searchController.searchResultsDataSource = self;
+        [_searchController.searchBar removeFromSuperview];
     }
 
     if (![UVSession currentSession].clientConfig.whiteLabel) {

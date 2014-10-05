@@ -38,6 +38,12 @@
 
     self.navigationItem.title = NSLocalizedStringFromTableInBundle(@"Post an idea", @"UserVoice", [UserVoice bundle], nil);
     self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedStringFromTableInBundle(@"Back", @"UserVoice", [UserVoice bundle], nil) style:UIBarButtonItemStylePlain target:nil action:nil];
+    
+    UILabel *titleLabel = [UILabel new];
+    titleLabel.text = NSLocalizedStringFromTableInBundle(@"Post an idea", @"UserVoice", [UserVoice bundle], nil);
+    titleLabel.font = [UVStyleSheet customInstance].navigationBarFont;
+    [titleLabel sizeToFit];
+    self.navigationItem.titleView = titleLabel;
 
     _fieldsView = [UVTextWithFieldsView new];
     _titleField = [_fieldsView addFieldWithLabel:NSLocalizedStringFromTableInBundle(@"Title", @"UserVoice", [UserVoice bundle], nil)];
@@ -63,7 +69,7 @@
     desc.text = NSLocalizedStringFromTableInBundle(@"When you post an idea on our forum, others will be able to subscribe to it and make comments. When we respond to the idea, you'll get notified.", @"UserVoice", [UserVoice bundle], nil);
     desc.textColor = [UIColor colorWithRed:0.6f green:0.6f blue:0.6f alpha:1.0f];
     desc.numberOfLines = 0;
-    desc.font = [UIFont systemFontOfSize:12];
+    desc.font = [UVStyleSheet styleSheetFontOfSize:12];
     self.desc = desc;
 
     NSArray *constraints = @[
@@ -74,7 +80,7 @@
         @"V:[_fieldsView][sep(==1)]-[desc]",
         @"V:[sep][bg]|"
     ];
-
+    
     [self configureView:view
                subviews:NSDictionaryOfVariableBindings(_fieldsView, sep, desc, bg)
             constraints:constraints];
@@ -115,6 +121,7 @@
                                                                              target:self
                                                                              action:@selector(next)];
     self.navigationItem.rightBarButtonItem.enabled = ([_titleField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]].length > 0);
+    self.navigationItem.rightBarButtonItem.tintColor = [UVStyleSheet customInstance].themeColorGray;
     [self registerForKeyboardNotifications];
     _didAuthenticateCallback = [[UVCallback alloc] initWithTarget:self selector:@selector(createSuggestion)];
     [self updateLayout];

@@ -70,7 +70,7 @@
                                                                              style:UIBarButtonItemStylePlain
                                                                             target:self
                                                                             action:@selector(dismiss)];
-
+    
     self.view = [[UIView alloc] initWithFrame:[self contentFrame]];
     self.view.backgroundColor = [UVStyleSheet instance].loadingViewBackgroundColor;
 
@@ -87,7 +87,7 @@
     [activity startAnimating];
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 70, loading.frame.size.width, 20)];
     label.backgroundColor = [UIColor clearColor];
-    label.font = [UIFont systemFontOfSize:15];
+    label.font = [UVStyleSheet styleSheetFontOfSize:15];
     label.textColor = [UIColor darkGrayColor];
     label.textAlignment = NSTextAlignmentCenter;
     label.text = NSLocalizedStringFromTableInBundle(@"Loading...", @"UserVoice", [UserVoice bundle], nil);
@@ -99,6 +99,7 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
     _loader = [UVInitialLoadManager loadWithDelegate:self action:@selector(pushNextView)];
 }
 

@@ -73,9 +73,7 @@
 
 - (void)initCellForContact:(UITableViewCell *)cell indexPath:(NSIndexPath *)indexPath {
     cell.textLabel.text = NSLocalizedStringFromTableInBundle(@"Send us a message", @"UserVoice", [UserVoice bundle], nil);
-    if (IOS7) {
-        cell.textLabel.textColor = cell.textLabel.tintColor;
-    }
+    cell.textLabel.textColor = [UVStyleSheet customInstance].themeColorRed;
 }
 
 - (void)initCellForArticle:(UITableViewCell *)cell indexPath:(NSIndexPath *)indexPath {
@@ -90,7 +88,7 @@
                 constraints:@[@"|-16-[label]-|", @"V:|-12-[label]-12-|"]];
     } else {
         UILabel *topic = [UILabel new];
-        topic.font = [UIFont systemFontOfSize:12];
+        topic.font = [UVStyleSheet styleSheetFontOfSize:12];
         topic.textColor = [UIColor grayColor];
         topic.tag = TOPIC;
         [self configureView:cell.contentView
@@ -99,6 +97,8 @@
              finalCondition:indexPath == nil
             finalConstraint:@"V:[topic]-12-|"];
     }
+    label.font = [UVStyleSheet styleSheetFontOfSize:14];
+
 }
 
 - (void)customizeCellForArticle:(UITableViewCell *)cell indexPath:(NSIndexPath *)indexPath {
@@ -116,7 +116,7 @@
     UILabel *label = [[UILabel alloc] initWithFrame:cell.frame];
     label.autoresizingMask = UIViewAutoresizingFlexibleWidth;
     label.backgroundColor = [UIColor clearColor];
-    label.font = [UIFont systemFontOfSize:16];
+    label.font = [UVStyleSheet styleSheetFontOfSize:16];
     label.textAlignment = NSTextAlignmentCenter;
     label.tag = LOADING;
     [cell addSubview:label];
